@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QR Code Generator
 
-## Getting Started
+A modern, user-friendly QR code generator built with Next.js 15, TypeScript, and TailwindCSS. Create customizable QR codes with optional logo integration.
 
-First, run the development server:
+![QR Code Generator Screenshot](./public/screenshot.png)
+
+## 🌐 Live Demo
+
+Visit the live application: [freeqrcode.vercel.app](https://freeqrcode.vercel.app)
+
+## ✨ Features
+
+- **Instant QR Code Generation**: Real-time QR code creation as you type
+- **Custom Logo Support**: Add your own logo to the center of the QR code
+- **Logo Size Control**: Adjust logo size while maintaining QR code readability
+- **Dark Mode Support**: Seamless experience in both light and dark themes
+- **Responsive Design**: Works perfectly on desktop and mobile devices
+- **Download Option**: Export your QR code as a PNG file
+- **Accessibility**: Built with ARIA labels and keyboard navigation support
+
+## 🛠️ Built With
+
+- [Next.js 15](https://nextjs.org/) - React Framework
+- [TypeScript](https://www.typescriptlang.org/) - Type Safety
+- [TailwindCSS](https://tailwindcss.com/) - Styling
+- [QRCode.react](https://www.npmjs.com/package/qrcode.react) - QR Code Generation
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/qrcodegenerator.git
+```
+
+2. Install dependencies:
+
+```bash
+cd qrcodegenerator
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💡 Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Enter any URL or text in the input field
+2. (Optional) Add a logo by clicking the file upload button
+3. Adjust the logo size if needed
+4. Download your QR code by clicking the download button
 
-## Learn More
+## 📱 Mobile Support
 
-To learn more about Next.js, take a look at the following resources:
+The application is fully responsive and works on all device sizes:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Desktop browsers
+- Tablet devices
+- Mobile phones
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌙 Dark Mode
 
-## Deploy on Vercel
+The application automatically detects your system's theme preference and adjusts accordingly. You can also manually toggle between light and dark modes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔒 Security
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- No data is stored on servers
+- All QR code generation happens client-side
+- Secure file handling for logo uploads
+
+## ⚖️ License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
