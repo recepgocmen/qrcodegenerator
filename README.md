@@ -6,7 +6,7 @@ A modern, user-friendly QR code generator built with Next.js 15, TypeScript, and
 
 ## 🌐 Live Demo
 
-Visit the live application: [freeqrcode.vercel.app](https://freeqrcode.vercel.app)
+Visit the live application: [qrcodeforfree.vercel.app](https://qrcodeforfree.vercel.app)
 
 ## ✨ Features
 
