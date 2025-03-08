@@ -105,7 +105,8 @@ const QRCodeGenerator = () => {
             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
             border-gray-200 hover:border-blue-300
             dark:border-gray-600 dark:hover:border-blue-700
-            dark:bg-gray-800 dark:text-white
+            dark:bg-gray-800/80 dark:text-white
+            bg-white/80 backdrop-blur-sm
             transition-all duration-200 ease-in-out
             placeholder:text-gray-400 dark:placeholder:text-gray-500"
           aria-label="Enter URL or text to generate QR code"
@@ -113,7 +114,11 @@ const QRCodeGenerator = () => {
       </div>
 
       {/* Logo Upload Section with Example */}
-      <div className="space-y-4 rounded-xl border-2 border-gray-100 dark:border-gray-700 p-6 hover:border-blue-100 dark:hover:border-blue-900/40 transition-colors">
+      <div
+        className="space-y-4 rounded-xl border-2 border-gray-100/80 dark:border-gray-700/50 
+        bg-white/60 dark:bg-gray-800/50 backdrop-blur-sm
+        p-6 hover:border-blue-100 dark:hover:border-blue-900/40 transition-colors"
+      >
         <div className="flex items-start gap-6">
           <div className="flex-1 space-y-4">
             <div className="flex items-center justify-between">
@@ -207,8 +212,9 @@ const QRCodeGenerator = () => {
       {/* Result Section */}
       <div className="pt-8">
         <div
-          className="flex flex-col items-center p-8 bg-white rounded-xl 
-            shadow-lg dark:bg-gray-800 hover:shadow-xl 
+          className="flex flex-col items-center p-8 
+            bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm
+            rounded-xl shadow-lg hover:shadow-xl 
             border-2 border-transparent hover:border-blue-100 dark:hover:border-blue-900/40
             transition-all duration-300 ease-in-out
             space-y-6"
