@@ -9,14 +9,14 @@ export default function Home() {
     >
       <div className="container mx-auto px-4 flex-grow pt-12">
         <h1
-          className="text-3xl font-bold text-center bg-clip-text text-transparent 
+          className="text-4xl font-bold text-center bg-clip-text text-transparent 
           bg-gradient-to-r from-blue-600 to-indigo-600 
           dark:from-blue-400 dark:to-indigo-400 
           mb-3 tracking-tight pt-6"
         >
           QR Code Generator
         </h1>
-        <p className="text-center text-gray-600 dark:text-gray-300 mb-8 tracking-wide text-sm">
+        <p className="text-center text-gray-600 dark:text-gray-300 mb-8 tracking-wide text-base">
           Generate QR codes with custom logos instantly
         </p>
         <QRCodeGenerator />

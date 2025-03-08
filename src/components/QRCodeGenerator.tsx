@@ -90,7 +90,7 @@ const QRCodeGenerator = () => {
       <div className="space-y-2 group">
         <label
           htmlFor="url-input"
-          className="block text-sm font-medium text-gray-700 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
+          className="block text-base font-medium text-gray-700 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
         >
           Enter URL or Text
         </label>
@@ -101,13 +101,13 @@ const QRCodeGenerator = () => {
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
           placeholder="example.com or any text"
-          className="w-full px-3 py-2.5 border-2 rounded-lg 
+          className="w-full px-4 py-3 border-2 rounded-lg 
             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
             border-gray-200 hover:border-blue-300
             dark:border-gray-600 dark:hover:border-blue-700
             dark:bg-gray-800/80 dark:text-white
             bg-white/80 backdrop-blur-sm
-            transition-all duration-200 ease-in-out text-sm
+            transition-all duration-200 ease-in-out text-base
             placeholder:text-gray-400 dark:placeholder:text-gray-500"
           aria-label="Enter URL or text to generate QR code"
         />
@@ -124,14 +124,14 @@ const QRCodeGenerator = () => {
             <div className="flex items-center justify-between">
               <label
                 htmlFor="logo-upload"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                className="block text-base font-medium text-gray-700 dark:text-gray-200"
               >
                 Add Logo (Optional)
               </label>
               {logo && (
                 <button
                   onClick={handleRemoveLogo}
-                  className="text-xs text-red-500 hover:text-red-600 dark:text-red-400
+                  className="text-sm text-red-500 hover:text-red-600 dark:text-red-400
                     px-2 py-0.5 rounded-full hover:bg-red-50 dark:hover:bg-red-900/20
                     transition-all duration-200"
                   aria-label="Remove logo"
@@ -246,13 +246,13 @@ const QRCodeGenerator = () => {
               <div className="flex justify-center">
                 <button
                   onClick={handleDownload}
-                  className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-500 text-white rounded-lg
-                    hover:bg-blue-600 transition-colors duration-200 text-sm
+                  className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg
+                    hover:bg-blue-600 transition-colors duration-200 text-base
                     focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                   aria-label="Download QR Code"
                 >
                   <svg
-                    className="w-4 h-4"
+                    className="w-5 h-5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -269,7 +269,7 @@ const QRCodeGenerator = () => {
               </div>
             </>
           ) : (
-            <div className="text-sm text-gray-400 dark:text-gray-500 text-center">
+            <div className="text-base text-gray-400 dark:text-gray-500 text-center">
               Enter a URL or text to generate QR code
             </div>
           )}
