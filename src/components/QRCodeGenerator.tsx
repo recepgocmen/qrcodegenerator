@@ -85,7 +85,7 @@ const QRCodeGenerator = () => {
   };
 
   return (
-    <div className="w-full max-w-xl mx-auto p-6 space-y-12">
+    <div className="w-full max-w-xl mx-auto p-4 space-y-12">
       {/* Input Section */}
       <div className="space-y-2 group">
         <label
@@ -101,13 +101,13 @@ const QRCodeGenerator = () => {
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
           placeholder="example.com or any text"
-          className="w-full px-4 py-3 border-2 rounded-lg 
+          className="w-full px-3 py-2.5 border-2 rounded-lg 
             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
             border-gray-200 hover:border-blue-300
             dark:border-gray-600 dark:hover:border-blue-700
             dark:bg-gray-800/80 dark:text-white
             bg-white/80 backdrop-blur-sm
-            transition-all duration-200 ease-in-out
+            transition-all duration-200 ease-in-out text-sm
             placeholder:text-gray-400 dark:placeholder:text-gray-500"
           aria-label="Enter URL or text to generate QR code"
         />
@@ -115,11 +115,11 @@ const QRCodeGenerator = () => {
 
       {/* Logo Upload Section with Example */}
       <div
-        className="space-y-4 rounded-xl border-2 border-gray-100/80 dark:border-gray-700/50 
+        className="space-y-4 rounded-xl border border-gray-100/80 dark:border-gray-700/50 
         bg-white/60 dark:bg-gray-800/50 backdrop-blur-sm
-        p-6 hover:border-blue-100 dark:hover:border-blue-900/40 transition-colors"
+        p-5 hover:border-blue-100 dark:hover:border-blue-900/40 transition-colors"
       >
-        <div className="flex items-start gap-6">
+        <div className="flex items-start gap-4">
           <div className="flex-1 space-y-4">
             <div className="flex items-center justify-between">
               <label
@@ -131,8 +131,8 @@ const QRCodeGenerator = () => {
               {logo && (
                 <button
                   onClick={handleRemoveLogo}
-                  className="text-sm text-red-500 hover:text-red-600 dark:text-red-400
-                    px-3 py-1 rounded-full hover:bg-red-50 dark:hover:bg-red-900/20
+                  className="text-xs text-red-500 hover:text-red-600 dark:text-red-400
+                    px-2 py-0.5 rounded-full hover:bg-red-50 dark:hover:bg-red-900/20
                     transition-all duration-200"
                   aria-label="Remove logo"
                 >
@@ -145,10 +145,10 @@ const QRCodeGenerator = () => {
               type="file"
               accept="image/*"
               onChange={handleLogoUpload}
-              className="block w-full text-sm text-gray-600 dark:text-gray-300
-                file:mr-4 file:py-2.5 file:px-4
+              className="block w-full text-xs text-gray-600 dark:text-gray-300
+                file:mr-3 file:py-1.5 file:px-3
                 file:rounded-lg file:border-0
-                file:text-sm file:font-semibold
+                file:text-xs file:font-semibold
                 file:bg-blue-50 file:text-blue-600
                 hover:file:bg-blue-100 hover:file:text-blue-700
                 dark:file:bg-blue-900/40 dark:file:text-blue-300
@@ -158,10 +158,10 @@ const QRCodeGenerator = () => {
               aria-label="Upload logo for QR code"
             />
             {logo && (
-              <div className="space-y-2">
+              <div className="space-y-1.5">
                 <label
                   htmlFor="logo-size"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                  className="block text-xs font-medium text-gray-700 dark:text-gray-200"
                 >
                   Logo Size: {logoSize}px
                 </label>
@@ -172,32 +172,31 @@ const QRCodeGenerator = () => {
                   max="40"
                   value={logoSize}
                   onChange={handleLogoSizeChange}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer
+                  className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer
                     dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600
                     transition-colors"
                 />
                 <p className="text-xs text-gray-500 dark:text-gray-400">
-                  Maximum size is limited to 40px to maintain QR code
-                  readability
+                  Maximum size is limited to 40px
                 </p>
               </div>
             )}
           </div>
 
           {/* Small Example */}
-          <div className="w-24 flex flex-col items-center space-y-2">
+          <div className="w-20 flex flex-col items-center space-y-1.5">
             <div
-              className="bg-white p-2 rounded-lg shadow-md dark:bg-gray-800 
+              className="bg-white p-1.5 rounded-lg shadow-md dark:bg-gray-800 
               hover:shadow-lg hover:scale-105 transition-all duration-200"
             >
               <QRCodeSVG
                 value={exampleQRData.url}
-                size={60}
+                size={50}
                 level="H"
                 imageSettings={{
                   src: exampleQRData.logoUrl,
-                  height: 15,
-                  width: 15,
+                  height: 12,
+                  width: 12,
                   excavate: true,
                 }}
               />
@@ -210,12 +209,12 @@ const QRCodeGenerator = () => {
       </div>
 
       {/* Result Section */}
-      <div className="pt-8">
+      <div>
         <div
           className="flex flex-col items-center p-8 
             bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm
             rounded-xl shadow-lg hover:shadow-xl 
-            border-2 border-transparent hover:border-blue-100 dark:hover:border-blue-900/40
+            border border-transparent hover:border-blue-100 dark:hover:border-blue-900/40
             transition-all duration-300 ease-in-out
             space-y-6"
           aria-live="polite"
@@ -228,7 +227,7 @@ const QRCodeGenerator = () => {
               >
                 <QRCodeSVG
                   value={getQRValue(inputValue)}
-                  size={240}
+                  size={200}
                   level="H"
                   aria-label={`QR Code for ${inputValue}`}
                   imageSettings={
@@ -244,16 +243,16 @@ const QRCodeGenerator = () => {
                 />
               </div>
 
-              <div className="flex justify-center pt-4">
+              <div className="flex justify-center">
                 <button
                   onClick={handleDownload}
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg
-                    hover:bg-blue-600 transition-colors duration-200
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-500 text-white rounded-lg
+                    hover:bg-blue-600 transition-colors duration-200 text-sm
                     focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                   aria-label="Download QR Code"
                 >
                   <svg
-                    className="w-5 h-5"
+                    className="w-4 h-4"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -270,7 +269,7 @@ const QRCodeGenerator = () => {
               </div>
             </>
           ) : (
-            <div className="text-gray-400 dark:text-gray-500 text-center">
+            <div className="text-sm text-gray-400 dark:text-gray-500 text-center">
               Enter a URL or text to generate QR code
             </div>
           )}
