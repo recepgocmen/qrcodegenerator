@@ -14,11 +14,17 @@ export default function Home() {
           dark:from-blue-400 dark:to-indigo-400 
           mb-3 tracking-tight pt-6"
         >
-          QR Code Generator
+          Free QR Code Generator
         </h1>
-        <p className="text-center text-gray-600 dark:text-gray-300 mb-8 tracking-wide text-base">
-          Generate QR codes with custom logos instantly
-        </p>
+        <div className="max-w-2xl mx-auto text-center mb-8">
+          <p className="text-center text-gray-600 dark:text-gray-300 tracking-wide text-base mb-2">
+            Create unlimited QR codes with custom logos instantly - 100% Free,
+            No Sign-up
+          </p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            Perfect for business cards, marketing materials, menus, and more
+          </p>
+        </div>
         <QRCodeGenerator />
       </div>
 
